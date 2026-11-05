@@ -10,13 +10,47 @@ header{background:linear-gradient(120deg,#5634ba,#8866df);color:white;padding:32
 .layout{display:grid;grid-template-columns:1.06fr .94fr;gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:0 4px 18px #281c5610}.card h2{font-size:19px;margin:0 0 18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field.full{grid-column:1/-1}label{display:block;font-size:13px;font-weight:650;color:#514967;margin-bottom:6px}input[type=text],input[type=number]{width:100%;border:1px solid #dcd6ea;border-radius:10px;background:white;padding:12px;font:inherit;outline:0;color:var(--ink)}input:focus{border-color:var(--purple);box-shadow:0 0 0 3px #7651db1c}input[type=checkbox]{accent-color:var(--purple)}.check{display:flex;align-items:center;gap:9px;margin-top:16px;font-size:14px;color:#514967}.section-label{font-size:12px;font-weight:800;color:#7e709e;letter-spacing:.06em;text-transform:uppercase;margin:19px 0 10px}small, .help{display:block;color:var(--muted);font-size:12px;line-height:1.45;margin-top:5px}
 .hero{background:#f2edff;border:1px solid #dfd3ff;border-radius:16px;padding:18px;margin-bottom:18px}.hero span{font-size:13px;color:#6145a7;font-weight:650}.hero strong{display:block;font-size:37px;margin:4px 0;color:#4e2fac;font-variant-numeric:tabular-nums}.hero small{color:#6b5794}.metrics{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px}.metric{border:1px solid var(--line);border-radius:12px;padding:13px}.metric small{margin:0 0 6px}.metric strong{font-size:20px}.metric.profit strong{color:var(--green)}.details{width:100%;border-collapse:collapse;font-size:14px}.details td{padding:11px 1px;border-bottom:1px solid var(--line)}.details td:last-child{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}.btns{display:flex;gap:9px;flex-wrap:wrap;margin-top:19px}button.primary,button.outline{padding:12px 16px;border:1px solid var(--purple);border-radius:10px;font:inherit;cursor:pointer;font-weight:700}button.primary{background:var(--purple);color:white}button.outline{background:white;color:var(--purple)}button:disabled{opacity:.5;cursor:not-allowed}#alert{color:var(--warn);font-size:13px;line-height:1.5;margin-top:12px}.table-wrap{overflow-x:auto}.products{width:100%;border-collapse:collapse;font-size:14px;min-width:650px}.products th{text-align:left;font-size:12px;text-transform:uppercase;color:#7d748f;border-bottom:1px solid var(--line);padding:10px}.products td{padding:13px 10px;border-bottom:1px solid var(--line)}.products td.num{text-align:right;font-variant-numeric:tabular-nums}.products button{border:0;background:#f8e7e8;color:#a03140;border-radius:8px;padding:6px 9px;cursor:pointer}#history{margin-top:20px}.hidden{display:none!important}.trend-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.trend{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px}.trend h3{margin:4px 0 9px;font-size:17px}.trend p{font-size:13px;color:#605a70;line-height:1.55}.trend a{color:#5b35bb;font-weight:700;text-decoration:none}.pill{display:inline-block;background:#f0ebff;color:#684cb5;font-size:11px;padding:5px 8px;border-radius:30px;font-weight:800}.note{border-left:3px solid #9a80dc;padding:11px 15px;background:#f3effc;margin:18px 0;border-radius:6px;font-size:13px;line-height:1.5}.foot{font-size:12px;color:var(--muted);margin-top:24px;line-height:1.6}a{color:var(--purple)}@media(max-width:810px){.layout,.trend-grid{grid-template-columns:1fr}}@media(max-width:460px){.grid{grid-template-columns:1fr}.hero strong{font-size:31px}}
 .syncbar{margin:10px 0 19px;background:white;border:1px solid #e7e4ed;border-radius:13px;padding:13px 15px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.syncbar strong{color:#4933a2}.syncbar small{margin:2px 0 0}.syncbar button{border:1px solid #7651db;border-radius:8px;background:white;color:#6040bf;padding:8px 11px;cursor:pointer;font-weight:700}.diff.up{color:#b13552;font-weight:750}.diff.down{color:#168263;font-weight:750}.changed{background:#fff5e7;border-radius:6px;padding:3px 6px}.subtle{font-size:12px;color:#746c86}
+/* Painel de tarifas dentro da aplicação */
+.fee-dialog{border:0;padding:0;border-radius:18px;width:min(720px,calc(100% - 24px));max-height:min(88dvh,850px);overflow:auto;box-shadow:0 22px 75px #21163756;color:var(--ink);background:var(--card)}
+.fee-dialog::backdrop{background:rgba(25,19,45,.57)}
+.fee-dialog .fee-dialog-content{padding:24px}
+.fee-dialog-header{display:flex;align-items:start;justify-content:space-between;gap:16px;margin-bottom:13px}
+.fee-dialog h2{font-size:23px;margin:0}
+.fee-dialog-close{background:#f3f0fa;border:1px solid var(--line);border-radius:10px;padding:7px 12px;cursor:pointer;color:var(--ink);font-size:20px}
+.fee-meta{font-size:13px;color:var(--muted);line-height:1.6;margin:0 0 15px}
+.fee-grid{overflow-x:auto;border:1px solid var(--line);border-radius:12px}
+.fee-table{width:100%;border-collapse:collapse;font-size:14px}
+.fee-table th,.fee-table td{padding:12px 13px;border-bottom:1px solid var(--line);text-align:left}
+.fee-table th{background:#f4f0fc;font-size:12px;color:#60537d}
+.fee-table tr:last-child td{border-bottom:0}
+.fee-table td:nth-child(2),.fee-table td:nth-child(3){white-space:nowrap;font-variant-numeric:tabular-nums}
+.fee-detail{background:#f7f4ff;padding:14px 16px;margin-top:15px;border-radius:12px;font-size:13px;line-height:1.6}
+.fee-detail p{margin:0 0 9px}.fee-detail p:last-child{margin-bottom:0}
+.fee-dialog-footer{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:16px}
+.fee-dialog-footer button{border:1px solid var(--purple);background:var(--purple);color:white;padding:10px 14px;border-radius:9px;cursor:pointer}
+.fee-dialog-footer a{font-size:13px}
+
 </style>
 </head>
 <body>
 <header><div class="wrap"><h1>Precificação Shopee</h1><p>Descubra quanto cobrar para receber o lucro desejado, já considerando a comissão e a tarifa fixa da faixa de preço.</p></div></header>
 <main>
 <div class="tabs"><button id="tabCalc" class="active" onclick="showTab('calc')">Calculadora</button><button id="tabTrend" onclick="showTab('trend')">Radar de produtos</button></div>
-<div class="syncbar"><div><strong id="feeStatus">Consultando tabela central de tarifas…</strong><small id="feeInfo">Os valores são estimativas; confirme com a Central do Vendedor.</small></div><div><button type="button" onclick="loadFees(true)">Atualizar taxas</button> <a href="https://github.com/diiegooh/precifica-shopee/blob/main/fees.json" target="_blank" rel="noopener">Consultar tabela</a></div></div>
+<div class="syncbar"><div><strong id="feeStatus">Consultando tabela central de tarifas…</strong><small id="feeInfo">Os valores são estimativas; confirme com a Central do Vendedor.</small></div><div><button type="button" onclick="loadFees(true)">Atualizar taxas</button> <button type="button" onclick="openTariffTable()">Consultar tabela</button></div></div>
+
+<dialog id="tariffDialog" class="fee-dialog" aria-labelledby="tariffHeading" onclick="if(event.target===this)this.close()">
+  <div class="fee-dialog-content">
+    <div class="fee-dialog-header"><h2 id="tariffHeading">Tabela de taxas Shopee</h2><button type="button" class="fee-dialog-close" aria-label="Fechar tabela" onclick="document.getElementById('tariffDialog').close()">×</button></div>
+    <p id="tariffMeta" class="fee-meta">Exibindo as tarifas configuradas nesta calculadora.</p>
+    <div class="fee-grid"><table class="fee-table"><thead><tr><th>Valor do produto</th><th>Comissão</th><th>Tarifa fixa</th></tr></thead><tbody id="tariffRows"></tbody></table></div>
+    <div class="fee-detail">
+      <p id="tariffSpecial"></p>
+      <p id="tariffCpf"></p>
+      <p><strong>Importante:</strong> esta é a tabela de referência configurada no painel, não uma consulta em tempo real à conta Shopee. Custos de campanhas, anúncios, frete e tributos podem alterar o preço final.</p>
+    </div>
+    <div class="fee-dialog-footer"><button type="button" onclick="document.getElementById('tariffDialog').close()">Entendi</button><a id="tariffSource" target="_blank" rel="noopener noreferrer" href="https://seller.shopee.com.br/">Consultar informações na Shopee</a></div>
+  </div>
+</dialog>
 <div id="calc">
 <div class="layout">
 <section class="card"><h2>Dados do produto</h2><div class="grid">
@@ -74,6 +108,34 @@ function exportCsv(){const a=data();if(!a.length){alert("Salve pelo menos um pro
 function exportBackup(){const obj={app:"precifica-shopee",version:1,exported_at:new Date().toISOString(),products:data()};const blob=new Blob([JSON.stringify(obj,null,2)],{type:"application/json"});const u=URL.createObjectURL(blob);const a=document.createElement("a");a.href=u;a.download="backup_precifica_shopee.json";a.click();setTimeout(()=>URL.revokeObjectURL(u),5000)}
 async function importBackup(ev){const f=ev.target.files&&ev.target.files[0];if(!f)return;try{const j=JSON.parse(await f.text());if(j.app!=="precifica-shopee"||!Array.isArray(j.products)||j.products.length>10000||!j.products.every(p=>p&&typeof p.name==="string"&&Number.isFinite(p.cost)&&p.cost>=0&&Number.isFinite(p.profit)&&p.profit>=0&&Number.isFinite(p.price)&&p.price>0))throw Error("Arquivo de backup inválido");if(confirm("Substituir os produtos deste navegador por "+j.products.length+" registros do backup?")){setData(j.products);renderHistory();alert("Backup importado com sucesso")}}catch(err){alert("Falha ao importar: "+err.message)}finally{ev.target.value=""}}
 function copyResult(){if(!current)return;const{q,p,name}=current;const text=`Produto: ${name}\nCusto: ${money.format(p.cost)}\nLucro desejado: ${money.format(p.profit)}\nPreço sugerido: ${money.format(q.price)}\nComissão: ${money.format(q.commission)}\nTaxa fixa: ${money.format(q.t.fixed)}\nOutras despesas: ${money.format(q.extra+q.variable)}\nLucro estimado: ${money.format(q.net)}\nMargem: ${(100*q.net/q.price).toFixed(1)}%`;if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(()=>alert('Cálculo copiado.'),()=>prompt('Copie o texto:',text))}else{prompt('Copie o texto:',text)}}
+
+function openTariffTable(){
+  const t=feeTable;
+  const dlg=$('tariffDialog');
+  const fmt=n=>money.format(n);
+  $('tariffMeta').textContent='Versão '+t.version+' · Vigência informada: '+t.effective_date+(t.reviewed_date?' · Revisão: '+t.reviewed_date:'')+'.';
+  const rows=$('tariffRows');
+  rows.replaceChildren();
+  const addRow=(label,rate,fixed)=>{
+    const tr=document.createElement('tr');
+    [label,(rate*100).toLocaleString('pt-BR',{maximumFractionDigits:2})+'%',fixed].forEach(value=>{
+      const td=document.createElement('td');td.textContent=value;tr.appendChild(td);
+    });
+    rows.appendChild(tr);
+  };
+  addRow('Abaixo de '+fmt(t.low_price_below),t.bands[0].rate,'Regra especial*');
+  t.bands.forEach(b=>{
+    const min=fmt(b.min_cents/100);
+    const max=b.max_cents===null?'A partir de '+min:min+' a '+fmt(b.max_cents/100);
+    addRow(max,b.rate,fmt(b.fixed));
+  });
+  $('tariffSpecial').textContent='* Abaixo de '+fmt(t.low_price_below)+', a calculadora usa tarifa fixa de '+(t.low_price_fixed_fraction*100).toLocaleString('pt-BR')+'% do preço, conforme a regra configurada. Confira a aplicação dessa regra na sua conta.';
+  $('tariffCpf').textContent='CPF com mais de 450 pedidos em 90 dias: adicional configurado de '+fmt(t.cpf_extra)+' por item. Abaixo de '+fmt(t.cpf_extra_below)+', a calculadora aplica a regra especial de até '+(t.cpf_extra_fraction_below*100).toLocaleString('pt-BR')+'% do preço. Verifique as condições de elegibilidade.';
+  const src=$('tariffSource');
+  if(/^https:\/\/seller\.shopee\.com\.br\//.test(t.source_url||'')) src.href=t.source_url;
+  else src.href='https://seller.shopee.com.br/';
+  if(!dlg.open)dlg.showModal();
+}
 function validateFees(j){if(!j||j.schema!==1||j.approved!==true||typeof j.version!=='string'||!Array.isArray(j.bands)||j.bands.length<1)throw Error("Tabela central inválida");if(!/^https:\/\/seller\.shopee\.com\.br\//.test(j.source_url||''))throw Error("Fonte oficial não informada");if(!/^\d{4}-\d\d-\d\d$/.test(j.effective_date))throw Error("Data de vigência inválida");if(!(j.low_price_below>0&&j.low_price_fixed_fraction>=0&&j.low_price_fixed_fraction<1&&j.cpf_extra>=0&&j.cpf_extra_below>0&&j.cpf_extra_fraction_below>=0))throw Error("Parâmetros inválidos");let expected=Math.round(j.low_price_below*100);for(const b of j.bands){if(b.min_cents!==expected||!(b.rate>=0&&b.rate<1)||!(b.fixed>=0))throw Error("Faixas inválidas");expected=b.max_cents===null?null:b.max_cents+1;if(expected===null&&b!==j.bands[j.bands.length-1])throw Error("Faixa final inválida")}if(expected!==null)throw Error("Faixa final não aberta");return j}
 async function loadFees(manual){try{const res=await fetch('./fees.json?v='+Date.now(),{cache:'no-store'});if(!res.ok)throw Error("Tabela não disponível no servidor");const j=validateFees(await res.json());const today=new Intl.DateTimeFormat('en-CA',{year:'numeric',month:'2-digit',day:'2-digit',timeZone:'America/Sao_Paulo'}).format(new Date());if(j.effective_date>today)throw Error("Nova tabela publicada com vigência futura: "+j.effective_date);const changed=j.version!==feeTable.version;feeTable=j;$('feeStatus').textContent='Taxas centrais carregadas — '+j.version;$('feeInfo').textContent='Vigência: '+j.effective_date+' · '+j.review_status+' · produtos recalculados automaticamente.';calc();renderHistory();if(changed&&manual)alert("Nova tabela aplicada. Confira os preços atualizados dos seus produtos.");}catch(e){$('feeStatus').textContent='Tarifas de referência (sem sincronização)';$('feeInfo').textContent=e.message+' — confirme a comissão na sua loja antes de vender.';if(manual)alert($('feeInfo').textContent)}}
 calc();renderHistory();loadFees(false);setInterval(()=>loadFees(false),60*60*1000);document.addEventListener("visibilitychange",()=>{if(!document.hidden)loadFees(false)});
